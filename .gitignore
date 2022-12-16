@@ -1,5 +1,5 @@
-./idea/
-./x64/
+.idea/
+x64/
 
 # Prerequisites
 *.d
