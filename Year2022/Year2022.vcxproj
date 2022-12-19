@@ -157,7 +157,8 @@
     <ClCompile Include="CalorieCounting\CalorieCounting.cpp" />
     <ClCompile Include="CalorieCounting\Elf.cpp" />
     <ClCompile Include="IProgram.cpp" />
-    <ClCompile Include="ProgramsCollection.cpp" />
+    <ClCompile Include="RockPaperScissors\Match.cpp" />
+    <ClCompile Include="RockPaperScissors\RockPaperScissors.cpp" />
     <ClCompile Include="VectorOperations.cpp" />
     <ClCompile Include="Year2022.cpp" />
   </ItemGroup>
@@ -166,6 +167,8 @@
     <ClInclude Include="CalorieCounting\Elf.h" />
     <ClInclude Include="IProgram.h" />
     <ClInclude Include="ProgramsCollection.h" />
+    <ClInclude Include="RockPaperScissors\Match.h" />
+    <ClInclude Include="RockPaperScissors\RockPaperScissors.h" />
     <ClInclude Include="VectorOperations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

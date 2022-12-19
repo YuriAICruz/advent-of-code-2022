@@ -66,3 +66,8 @@ int CalorieCounting::GetMax()
     std::cout << maxIndex << std::endl;
     return max;
 }
+
+std::string CalorieCounting::GetDescription()
+{
+    return "Calorie Counting Algorithm";
+}
