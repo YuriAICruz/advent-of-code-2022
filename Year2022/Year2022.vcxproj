@@ -109,6 +109,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>G:\Projects\Cpp\AdventofCode\libs</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,6 +160,8 @@
     <ClCompile Include="IProgram.cpp" />
     <ClCompile Include="RockPaperScissors\Match.cpp" />
     <ClCompile Include="RockPaperScissors\RockPaperScissors.cpp" />
+    <ClCompile Include="RucksackReorganization\Rucksack.cpp" />
+    <ClCompile Include="RucksackReorganization\RucksackReorganization.cpp" />
     <ClCompile Include="VectorOperations.cpp" />
     <ClCompile Include="Year2022.cpp" />
   </ItemGroup>
@@ -169,6 +172,9 @@
     <ClInclude Include="ProgramsCollection.h" />
     <ClInclude Include="RockPaperScissors\Match.h" />
     <ClInclude Include="RockPaperScissors\RockPaperScissors.h" />
+    <ClInclude Include="RucksackReorganization\PriorityData.h" />
+    <ClInclude Include="RucksackReorganization\Rucksack.h" />
+    <ClInclude Include="RucksackReorganization\RucksackReorganization.h" />
     <ClInclude Include="VectorOperations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
