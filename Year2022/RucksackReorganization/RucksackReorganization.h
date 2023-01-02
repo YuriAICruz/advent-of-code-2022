@@ -12,7 +12,8 @@ public:
     std::string GetDescription() override;
 private:
     int GetPriorityValue(char* c);
-    void PopulatePriorityData();
+    void PopulatePriorityData(bool useDefault = true);
+    char FindBadge(int size, Rucksack* list);
     std::vector<Rucksack*> _sacks;
     std::vector<PriorityData*> _priorityData;
     

@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+
 Rucksack::Rucksack(const std::string* data)
 {
 	const int length = (*data).length()+1;
@@ -12,15 +13,17 @@ Rucksack::Rucksack(const std::string* data)
 		arr[i] = (*data)[i];
 	}
 
-	_size = length/2;
-	_storageA = new char[_size];
-	for (int i = 0, n = _size; i < n; ++i)
+	_fullStorage = arr;
+
+	_halfSize = length/2;
+	_storageA = new char[_halfSize];
+	for (int i = 0, n = _halfSize; i < n; ++i)
 	{
 		_storageA[i] = arr[i];
 	}
 	
-	_storageB = new char[_size];
-	for (int i = 0, j = _size; j < length; ++i, ++j)
+	_storageB = new char[_halfSize];
+	for (int i = 0, j = _halfSize; j < length; ++i, ++j)
 	{
 		_storageB[i] = arr[j];
 	}
@@ -28,9 +31,9 @@ Rucksack::Rucksack(const std::string* data)
 
 char Rucksack::GetCommonItem()
 {
-	for (int i = 0, n = _size; i < n; ++i)
+	for (int i = 0, n = _halfSize; i < n; ++i)
 	{
-		for (int j = 0, m = _size; j < m; ++j)
+		for (int j = 0, m = _halfSize; j < m; ++j)
 		{
 			if(_storageA[i] == _storageB[j])
 			{
@@ -40,4 +43,14 @@ char Rucksack::GetCommonItem()
 	}
 	
 	return '0';
+}
+
+char* Rucksack::GetStorage()
+{
+	return _fullStorage;
+}
+
+int Rucksack::GetStorageSize()
+{
+	return _halfSize*2;
 }
