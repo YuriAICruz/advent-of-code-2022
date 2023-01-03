@@ -27,16 +27,24 @@ void CampCleanup::Execute()
         pairs.push_back(pair);
     }
 
+    int fullOverlapSum = 0;
     int overlapSum = 0;
     for (WorkersGroup* pair : pairs)
     {
         if (pair->FullyOverlap())
+        {
+            fullOverlapSum++;
+        }
+
+        if (pair->Overlap())
         {
             overlapSum++;
         }
     }
 
     std::cout << "Full Overlap pairs sum:" << std::endl;
+    std::cout << fullOverlapSum << std::endl;
+    std::cout << "Overlap pairs sum:" << std::endl;
     std::cout << overlapSum << std::endl;
 }
 

@@ -46,3 +46,25 @@ bool WorkersGroup::FullyOverlap()
 
     return false;
 }
+
+bool WorkersGroup::Overlap()
+{
+    if (_workers.size() != 2)
+    {
+        std::cout << "Not Implemented" << std::endl;
+        return false;
+    }
+
+    int a = _workers[0]->GetFirst();
+    int b = _workers[0]->GetLast();
+
+    int x = _workers[1]->GetFirst();
+    int y = _workers[1]->GetLast();
+
+    if (x >= a && x <= b || y >= a && y <= b || a >= x && a <= y || b >= x && b <= y)
+    {
+        return true;
+    }
+
+    return false;
+}
