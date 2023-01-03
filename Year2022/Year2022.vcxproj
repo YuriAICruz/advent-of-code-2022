@@ -157,6 +157,9 @@
   <ItemGroup>
     <ClCompile Include="CalorieCounting\CalorieCounting.cpp" />
     <ClCompile Include="CalorieCounting\Elf.cpp" />
+    <ClCompile Include="CampCleanup\CampCleanup.cpp" />
+    <ClCompile Include="CampCleanup\Worker.cpp" />
+    <ClCompile Include="CampCleanup\WorkersGroup.cpp" />
     <ClCompile Include="IProgram.cpp" />
     <ClCompile Include="RockPaperScissors\Match.cpp" />
     <ClCompile Include="RockPaperScissors\RockPaperScissors.cpp" />
@@ -168,6 +171,9 @@
   <ItemGroup>
     <ClInclude Include="CalorieCounting\CalorieCounting.h" />
     <ClInclude Include="CalorieCounting\Elf.h" />
+    <ClInclude Include="CampCleanup\CampCleanup.h" />
+    <ClInclude Include="CampCleanup\Worker.h" />
+    <ClInclude Include="CampCleanup\WorkersGroup.h" />
     <ClInclude Include="IProgram.h" />
     <ClInclude Include="ProgramsCollection.h" />
     <ClInclude Include="RockPaperScissors\Match.h" />
