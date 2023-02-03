@@ -165,6 +165,9 @@
     <ClCompile Include="RockPaperScissors\RockPaperScissors.cpp" />
     <ClCompile Include="RucksackReorganization\Rucksack.cpp" />
     <ClCompile Include="RucksackReorganization\RucksackReorganization.cpp" />
+    <ClCompile Include="SupplyStacks\Crate.cpp" />
+    <ClCompile Include="SupplyStacks\SupplyLayout.cpp" />
+    <ClCompile Include="SupplyStacks\SupplyStacks.cpp" />
     <ClCompile Include="VectorOperations.cpp" />
     <ClCompile Include="Year2022.cpp" />
   </ItemGroup>
@@ -181,6 +184,9 @@
     <ClInclude Include="RucksackReorganization\PriorityData.h" />
     <ClInclude Include="RucksackReorganization\Rucksack.h" />
     <ClInclude Include="RucksackReorganization\RucksackReorganization.h" />
+    <ClInclude Include="SupplyStacks\Crate.h" />
+    <ClInclude Include="SupplyStacks\SupplyLayout.h" />
+    <ClInclude Include="SupplyStacks\SupplyStacks.h" />
     <ClInclude Include="VectorOperations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -7,17 +7,19 @@
 #include "CampCleanup/CampCleanup.h"
 #include "RockPaperScissors/RockPaperScissors.h"
 #include "RucksackReorganization/RucksackReorganization.h"
+#include "SupplyStacks/SupplyStacks.h"
 
 int main(int argc, char* argv[])
 {
-    IProgram* programs[4] = {
+    IProgram* programs[5] = {
         new CalorieCounting(),
         new RockPaperScissors(),
         new RucksackReorganization(),
-        new CampCleanup()
+        new CampCleanup(),
+        new SupplyStacks(),
     };
 
-    const auto collection = new ProgramsCollection<4>(programs);
+    const auto collection = new ProgramsCollection<5>(programs);
     while (true)
     { 
         std::cout << collection->OptionValues() << std::endl;
