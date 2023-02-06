@@ -7,6 +7,26 @@
 
 void SupplyStacks::Execute()
 {
+    bool moveAsGroup = true;
+    while (true)
+    {
+        std::cout << "Move boxes in group? [Y/n]\n";
+        std::string groupInput;
+        std::cin.ignore();
+        std::getline(std::cin, groupInput);
+        if(groupInput.empty() || groupInput == "y" || groupInput == "Y")
+        {
+            moveAsGroup = true;
+            break;
+        }
+
+        if (groupInput == "n" || groupInput == "N")
+        {
+            moveAsGroup = false;
+            break;
+        }
+    }
+    
     std::string layoutInput;
     std::cout << "Input boxes layout [use $ to end input]\n";
 
@@ -41,17 +61,17 @@ void SupplyStacks::Execute()
     std::string operationInput;
     while (std::getline(std::cin, operationInput))
     {
-        if(layoutInput.empty())
+        if(operationInput.empty())
         {
             continue;
         }
 
-        if(layoutInput == "$")
+        if(operationInput == "$")
         {
             break;
         }
         
-        layout->OperateFromInput(operationInput);
+        layout->OperateFromInput(operationInput, moveAsGroup);
     }
     
     std::cout << "Operations finished\n";
