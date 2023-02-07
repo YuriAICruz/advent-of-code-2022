@@ -1,0 +1,1 @@
+﻿Study code for https://adventofcode.com/2022
