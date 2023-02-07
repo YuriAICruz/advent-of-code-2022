@@ -168,6 +168,8 @@
     <ClCompile Include="SupplyStacks\Crate.cpp" />
     <ClCompile Include="SupplyStacks\SupplyLayout.cpp" />
     <ClCompile Include="SupplyStacks\SupplyStacks.cpp" />
+    <ClCompile Include="Tuning\SignalData.cpp" />
+    <ClCompile Include="Tuning\Tuning.cpp" />
     <ClCompile Include="VectorOperations.cpp" />
     <ClCompile Include="Year2022.cpp" />
   </ItemGroup>
@@ -187,6 +189,8 @@
     <ClInclude Include="SupplyStacks\Crate.h" />
     <ClInclude Include="SupplyStacks\SupplyLayout.h" />
     <ClInclude Include="SupplyStacks\SupplyStacks.h" />
+    <ClInclude Include="Tuning\SignalData.h" />
+    <ClInclude Include="Tuning\Tuning.h" />
     <ClInclude Include="VectorOperations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
