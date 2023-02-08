@@ -1,16 +1,28 @@
 ﻿#pragma once
+#include <sstream>
 #include <string>
 
 class File
 {
 public:
-    File(std::string fileName, std::string size)
+    File(std::string fileName, std::string sizeInput)
     {
         _fileName = fileName;
+
+        std::stringstream stream;
+        stream << sizeInput;
+        int size;
+        stream >> size;
+
         _size = size;
+    }
+    
+    int GetSize()
+    {
+        return _size;
     }
     
 private:
     std::string _fileName;
-    std::string _size;
+    int _size;
 };

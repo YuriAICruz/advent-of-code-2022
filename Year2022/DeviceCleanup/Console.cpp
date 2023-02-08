@@ -79,7 +79,54 @@ void Console::AddData(std::vector<std::string>::const_reference arg,
     _directories[_currentDirectoryIndex].AddFile(name, arg); 
 }
 
+void Console::ListDirectories()
+{
+    for (Directory directory : _directories)
+    {
+        int totalSize = GetSize(directory);
+        std::cout << "Dir ";
+        std::cout << directory.GetFullPath();
+        std::cout << " size ";
+        std::cout << totalSize;
+        std::cout << "\n";
+    }
+}
+
 void Console::CreateDirectory(std::vector<std::string>::const_reference name)
 {
     _directories.emplace_back(_directories[_currentDirectoryIndex].GetFullPath() + "/" + name);
+}
+
+int Console::GetSize(Directory directory)
+{
+    int totalSize = 0;
+
+    std::vector<File> files = directory.GetFiles();
+
+    for (auto file : files)
+    {
+        totalSize += file.GetSize();
+    }
+
+    std::vector<Directory> directories = GetChildDirectories(directory);
+
+    for (Directory directory : directories)
+    {
+        totalSize += GetSize(directory);
+    }
+
+    return totalSize;
+}
+
+std::vector<Directory> Console::GetChildDirectories(Directory directory)
+{
+    std::vector<Directory> directories;
+    for (int i = 0, n = static_cast<int>(_directories.size()); i < n; ++i)
+    {
+        if (_directories[i].GetFullPath().find(directory.GetFullPath()+"/") != std::string::npos)
+        {
+            directories.push_back(_directories[i]);
+        }
+    }
+    return directories;
 }

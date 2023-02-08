@@ -8,7 +8,7 @@
 
 void DeviceCleanup::Execute()
 {
-    std::cout << "Enter commands sequence use '$ quit' to exit";
+    std::cout << "Enter commands sequence use '$ quit' to exit\n";
 
     Console console = Console();
     std::string lineInput;
@@ -25,15 +25,23 @@ void DeviceCleanup::Execute()
         }
         if(args[0] == "$")
         {
-            if(args[1] == "quit" || args[0] == "exit")
+            if(args[1] == "quit" || args[1] == "exit")
             {
                 break;
             }
 
-            console.RunCommand(args[1], args[2]);
+            if(args.size() == 2)
+            {
+                console.RunCommand(args[1], "");
+            }else
+            {
+                console.RunCommand(args[1], args[2]);
+            }
         }else
         {
-            console.AddData(args[1], args[2]);
+            console.AddData(args[0], args[1]);
         }
     }
+
+    console.ListDirectories();
 }

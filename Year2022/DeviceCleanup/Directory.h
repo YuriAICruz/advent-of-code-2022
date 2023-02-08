@@ -18,6 +18,11 @@ struct Directory
 
     void AddFile(std::string fileName, std::string size);
 
+    std::vector<File> GetFiles()
+    {
+        return _files;
+    }
+
 private:
     std::string _name;
     std::vector<File> _files;
