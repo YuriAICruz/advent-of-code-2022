@@ -56,7 +56,7 @@ void Tuning::Execute()
             break;
         }
 
-        signals.push_back(SignalData(lineInput));        
+        signals.emplace_back(lineInput);
     }
 
     std::cout << "Processing . . .\n";

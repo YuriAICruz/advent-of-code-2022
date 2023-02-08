@@ -51,20 +51,7 @@ int SupplyLayout::GetMaxStack()
 
 void SupplyLayout::OperateFromInput(std::string operationInput, bool moveGrouped)
 {
-    const std::string delimiter = " ";
-    size_t pos = 0;
-    std::vector<std::string> args;
-    while ((pos = operationInput.find(delimiter)) != std::string::npos)
-    {
-        args.push_back(operationInput.substr(0, pos));
-        operationInput.erase(0, pos + delimiter.length());
-    }
-    
-    if(!operationInput.empty())
-    {
-        args.push_back(operationInput);
-    }
-
+    std::vector<std::string> args = StringOperations::Split(operationInput, " ");
 
     int amount = -1;
     int originIndex = -1;

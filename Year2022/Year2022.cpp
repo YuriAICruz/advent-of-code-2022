@@ -5,6 +5,7 @@
 #include "ProgramsCollection.h"
 #include "CalorieCounting/CalorieCounting.h"
 #include "CampCleanup/CampCleanup.h"
+#include "DeviceCleanup/DeviceCleanup.h"
 #include "RockPaperScissors/RockPaperScissors.h"
 #include "RucksackReorganization/RucksackReorganization.h"
 #include "SupplyStacks/SupplyStacks.h"
@@ -12,16 +13,17 @@
 
 int main(int argc, char* argv[])
 {
-    IProgram* programs[6] = {
+    IProgram* programs[7] = {
         new CalorieCounting(),
         new RockPaperScissors(),
         new RucksackReorganization(),
         new CampCleanup(),
         new SupplyStacks(),
         new Tuning(),
+        new DeviceCleanup(),
     };
 
-    const auto collection = new ProgramsCollection<6>(programs);
+    const auto collection = new ProgramsCollection<7>(programs);
     while (true)
     { 
         std::cout << collection->OptionValues() << std::endl;

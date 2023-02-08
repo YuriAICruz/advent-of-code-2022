@@ -160,11 +160,16 @@
     <ClCompile Include="CampCleanup\CampCleanup.cpp" />
     <ClCompile Include="CampCleanup\Worker.cpp" />
     <ClCompile Include="CampCleanup\WorkersGroup.cpp" />
+    <ClCompile Include="DeviceCleanup\Console.cpp" />
+    <ClCompile Include="DeviceCleanup\DeviceCleanup.cpp" />
+    <ClCompile Include="DeviceCleanup\Directory.cpp" />
+    <ClCompile Include="DeviceCleanup\File.cpp" />
     <ClCompile Include="IProgram.cpp" />
     <ClCompile Include="RockPaperScissors\Match.cpp" />
     <ClCompile Include="RockPaperScissors\RockPaperScissors.cpp" />
     <ClCompile Include="RucksackReorganization\Rucksack.cpp" />
     <ClCompile Include="RucksackReorganization\RucksackReorganization.cpp" />
+    <ClCompile Include="StringOperations.cpp" />
     <ClCompile Include="SupplyStacks\Crate.cpp" />
     <ClCompile Include="SupplyStacks\SupplyLayout.cpp" />
     <ClCompile Include="SupplyStacks\SupplyStacks.cpp" />
@@ -179,6 +184,10 @@
     <ClInclude Include="CampCleanup\CampCleanup.h" />
     <ClInclude Include="CampCleanup\Worker.h" />
     <ClInclude Include="CampCleanup\WorkersGroup.h" />
+    <ClInclude Include="DeviceCleanup\Console.h" />
+    <ClInclude Include="DeviceCleanup\DeviceCleanup.h" />
+    <ClInclude Include="DeviceCleanup\Directory.h" />
+    <ClInclude Include="DeviceCleanup\File.h" />
     <ClInclude Include="IProgram.h" />
     <ClInclude Include="ProgramsCollection.h" />
     <ClInclude Include="RockPaperScissors\Match.h" />
@@ -186,6 +195,7 @@
     <ClInclude Include="RucksackReorganization\PriorityData.h" />
     <ClInclude Include="RucksackReorganization\Rucksack.h" />
     <ClInclude Include="RucksackReorganization\RucksackReorganization.h" />
+    <ClInclude Include="StringOperations.h" />
     <ClInclude Include="SupplyStacks\Crate.h" />
     <ClInclude Include="SupplyStacks\SupplyLayout.h" />
     <ClInclude Include="SupplyStacks\SupplyStacks.h" />
