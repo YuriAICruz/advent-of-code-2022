@@ -43,5 +43,5 @@ void DeviceCleanup::Execute()
         }
     }
 
-    console.ListDirectories();
+    console.GetTotalSize();
 }

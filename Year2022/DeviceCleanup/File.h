@@ -21,7 +21,12 @@ public:
     {
         return _size;
     }
-    
+
+    std::string GetName()
+    {
+        return _fileName;
+    }
+
 private:
     std::string _fileName;
     int _size;
