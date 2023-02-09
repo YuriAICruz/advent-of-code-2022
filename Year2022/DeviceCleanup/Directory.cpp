@@ -65,3 +65,34 @@ int Directory::GetSize(bool recursive, int level)
 
     return size;
 }
+
+int Directory::GetSizeCustom(int(* function)(File file), bool recursive, int level)
+{
+    std::string indent = "";
+
+    for (int i = 0; i < level; ++i)
+    {
+        indent += "  ";
+    }
+
+    std::cout << indent + "Directory: " + _name + "\n";
+    indent += " ";
+
+    int size = 0;
+    for (auto file : _files)
+    {
+        std::cout << indent + file.GetName() + "(" + std::to_string(file.GetSize()) + ")\n";
+        size += function(file);
+    }
+    if (!recursive)
+    {
+        return size;
+    }
+
+    for (auto directory : _directories)
+    {
+        size += directory.GetSize(recursive, ++level);
+    }
+
+    return size;
+}

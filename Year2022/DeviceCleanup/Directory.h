@@ -40,6 +40,7 @@ struct Directory
     Directory* GetDirectory(const std::string& string);
     Directory* CreateDirectory(const std::string& name);
     int GetSize(bool recursive, int level = 0);
+    int GetSizeCustom(int(* function)(File file), bool recursive, int level = 0);
 
 private:
     std::string _name;

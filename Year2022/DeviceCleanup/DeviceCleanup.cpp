@@ -43,5 +43,16 @@ void DeviceCleanup::Execute()
         }
     }
 
-    console.GetTotalSize();
+    int size = console.GetTotalSizeCustom([](File file){
+        if(file.GetSize() >= 100000)
+        {
+            return 0;
+        }
+        return file.GetSize();
+    });
+    
+    std::cout << "Total filtered size: " + std::to_string(size) + "\n";
+    
+    size = console.GetTotalSize();
+    std::cout << "Total size: " + std::to_string(size) + "\n";
 }

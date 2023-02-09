@@ -51,8 +51,12 @@ void Console::AddData(std::vector<std::string>::const_reference arg,
     _currentDirectory->GetFile(name, arg);
 }
 
-void Console::GetTotalSize()
+int Console::GetTotalSize()
 {
-    int size = _directory.GetSize(true);
-    std::cout << "Total size: " + std::to_string(size);
+    return _directory.GetSize(true);
+}
+
+int Console::GetTotalSizeCustom(int (* function)(File file))
+{
+    return _directory.GetSizeCustom(function, true);
 }
